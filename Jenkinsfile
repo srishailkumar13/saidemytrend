@@ -13,10 +13,13 @@ pipeline {
 	   environment {
 		scannerHome = tool 'sonarqube-scanner'	
 	   }
+	}
 	   steps {
 	       withSonarQubeEnv('sonarqube-sri') {
 		   sh "${scannerHome}/bin/sonar-scanner"
 		}
 	   }
 	}
-     }
+}
+	
+     
